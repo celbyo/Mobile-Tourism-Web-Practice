@@ -35,6 +35,9 @@ div,figure,figcaption{
 	height: 0;
 }
 #header{
+	position: fixed;
+	top:0;
+	z-index: 9999;
 	width:100%;
 	height: .45rem;
 	background-color: #333;
@@ -60,6 +63,7 @@ div,figure,figcaption{
 
 .adver{
 	max-width: 6.4rem;
+	padding: .45rem 0 0 0 ;
 	margin:0 auto;
 }
 #search{
@@ -171,24 +175,230 @@ div,figure,figcaption{
 	padding: 0 0 0.05rem 0;
 }
 
+/*info页面*/
+#headline{
+	position: relative;
+	max-width: 6.4rem;
+	padding: .45rem 0 0 0;
+	margin: 0 auto;
+}
+#headline hgroup{
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	color: #eee;
+}
+#headline h2{
+	font-size: .22rem;
+}
+#headline h3{
+	font-size: .14rem;
+}
+.list{
+	max-width: 6.4rem;
+	font-size: .16rem;
+	color: #666;
+	padding: 0 .1rem;
+	margin: .15rem auto;
+}
+.list h2{
+	font-size: .20rem;
+	padding: 0 0 .15rem 0;
+	border-bottom: .01rem dashed #999;
+}
+
+/*公司简介*/
+.about p{
+	line-height: 2;
+	margin: .2rem 0;
+}
+.about address{
+	font-style: normal;
+	line-height: 1.6;
+	margin:  .2rem 0;
+}
+/*资讯页面*/
+.info figure{
+	position: relative;
+	margin: .15rem 0 0 0;
+}
+.info figure:after{
+	content: ".";
+	display: block;
+	clear:both;
+	visibility: hidden;
+	height: 0;
+}
+.info figure img{
+	width: 50%;
+	float: left;
+}
+.info figure figcaption{
+	width: 48%;
+	float: right;
+}
+.info .title{
+	padding: 0 0 .05rem 0;
+	border:none;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.info .sm-title{
+	font-weight: normal;
+	padding: 0;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.info .price{
+	position: absolute;
+	bottom: 0;
+	color: #f60;
+}
+.info .price strong{
+	font-size: .26rem;
+}
+
+/*票务页面*/
+.ticket .type{
+	margin: .2rem 0 .1rem 0 ;
+	border:none;
+}
+.ticket .type mark{
+	color:#fff;
+	background-color:#458b00;
+	padding: .05rem .08rem;
+	border-radius: .04rem;
+	margin: 0 .10rem 0 .16rem,;
+}
+.ticket .form{
+	border:none;
+}
+.ticket .form p{
+	margin: .1rem 0;
+}
+.ticket .form label{
+	display: block;
+	margin: 0 0 .05rem 0;
+}
+.ticket .form input{
+	width: 97%;
+	height: .2rem;
+	color:#666;
+	padding: .05rem;
+	background-color: #fff;
+	border-radius: .04rem;
+	border: 1px solid #ccc;
+}
+.ticket .submit{
+	display: block;
+	width: 30%;
+	color:#fff;
+	text-align: center;
+	background-color: #f60;
+	padding: .1rem;
+	margin: 0 auto;
+	border-radius: .04rem;
+	border:none;
+	cursor:pointer;
+}
+.ticket .new{
+	margin: .2rem 0 0 0;
+}
+.ticket .new ul{
+	margin: .2rem 0 0 0;
+}
+.ticket .new li{
+	display: inline-block;
+	padding: .05rem .1rem;
+}
+.ticket .new li:first-child{
+	padding-left: 0;
+}
+.ticket .new li:nth-child(2){
+	color:#fff;
+	background-color: #458b00;
+	border-radius: .04rem;
+}
+.ticket table{
+	margin: .20rem 0 0 0;
+	width: 100%;
+	border:1px solid #ddd;
+	border-collapse:collapse;
+}
+.ticket table th{
+	font-weight: normal;
+	padding: .15rem 0;
+	border-bottom:1px solid #ddd;
+}
+.ticket table td{
+	padding: .15rem 0;
+	text-align: center;
+	border-bottom:1px solid #ddd;
+}
+.ticket table tr:nth-child(2n){
+	background-color: #fafafa;
+}
+.ticket table tr:hover{
+	background-color: #eee;
+}
+.ticket .price{
+	color:#f60;
+}
+.ticket .more-flight{
+	color:#666;
+}
+.ticket table .reserve{
+	display: inline-block;
+	color:#fff;
+	text-align: center;
+	background-color: #f60;
+	padding: .05rem .08rem;
+	border-radius: .04rem;
+}
+
 /*媒体查询：大于480px小于640px*/
 @media (min-width: 480px) and (max-width: 640px){
-	#tour h2{
+	#tour h2,.info .price strong{
 		font-size: .26rem;
 	}
-	#tour h3,#footer,#tour figure,#tour .info{
+	#tour h3,#footer,#tour figure,#tour .info,.list{
 		font-size: .16rem;
+	}
+	#headline h2{
+		font-size: .22rem;
+	}
+	#headline h3{
+		font-size: .14rem;
+	}
+	.list h2{
+		font-size: .20rem;
 	}
 }
 @media (max-width: 480px){
-	#tour h2{
+	#tour h2,.info .price strong{
 		font-size: .20rem;
 	}
-	#tour h3,#tour figcaption,#tour .info{
+	#tour h3,#tour figcaption,#tour .info,.list{
 		font-size: .14rem;
 	}
 	#footer{
 		font-size: .12rem;
+	}
+	#headline h2{
+		font-size: .18rem;
+	}
+	#headline h3{
+		font-size: .12rem;
+	}
+	.list h2{
+		font-size: .17rem;
+	}
+	.min{
+		display: none;
 	}
 }
 
